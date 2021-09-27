@@ -1,3 +1,5 @@
 # Photo-Filter-Program-in-C
 
 A program that applies filters to BMPs. Using bitmaps and hexadecimal numbers RGB values create four filters, Greyscale, Reflection, Blur, and Edges. By taking in average values of each pixel and making the RGB values all equal I created a program that can convert a photo to black-and-white. Storing one pixel in a tmp memory allocation and moving each individual pixel to the other side, I have created a filter that can flip an image on the y- axis. Using the “Box Blur” Idea i take a 3x3 grid of pixels and find the average values of each RGB value and changing the middle pixel with those average values to effectively blur an image. Finally, using Sobel’s filter algorithm I combine a 3x3 grid of Gx and Gy to see how big the difference from one pixel to another is on both y-axis and x-axis. then finding the square root of Gx^2 + Gy^2 I can find the RGB values of the middle pixel effectively creating a edge detection filter that is used widely in AI image detection using image processing.
+
+Implementations of these filters can be found in helpers.c
